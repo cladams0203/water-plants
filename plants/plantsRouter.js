@@ -8,6 +8,13 @@ router.get("/:id", (req, res) => {
     })
     .catch((err) => res.status(500).json({ message: err.message }));
 });
+router.get("/", (req, res) => {
+  Plants.find()
+    .then((plants) => {
+      res.status(200).json(plants);
+    })
+    .catch((err) => res.status(500).json({ message: err.message }));
+});
 
 router.post("/user/:id", (req, res) => {
   const newPlant = { ...req.body, user_id: req.params.id };

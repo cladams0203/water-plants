@@ -16,7 +16,8 @@ Api for tracking and watering plant life
 |  POST  |    /api/user/login    |        Login an existing User        |    No     |
 |  GET   |      /api/users       |       Get a list of all Users        |    Yes    |
 |  POST  | /api/plants/users/:id | Add a new plant to a User by User id |    Yes    |
-|  GET   |    /api/plants/:id    |       Get a Plant by PLant id        |    Yes    |
+|  GET   |      /api/plants      |            Get all plants            |    Yes    |
+|  GET   |    /api/plants/:id    |       Get a Plant by Plant id        |    Yes    |
 |  PUT   |    /api/plants/:id    |      Update a Plant by Plant id      |    Yes    |
 | DELETE |    /api/plants/:id    |      Remove a Plant by Plant id      |    Yes    |
 
@@ -34,8 +35,8 @@ Api for tracking and watering plant life
 
 ```
   {
-      "username": "test",
-      "password": "test",
+      "username": "test",  //required
+      "password": "test",  //required
       "phone": 8675309
   }
 
@@ -63,8 +64,8 @@ Api for tracking and watering plant life
 
 ```
   {
-      "username": "test",
-      "password": "test"
+      "username": "test", //required
+      "password": "test"  //required
   }
 
 ```
@@ -235,4 +236,31 @@ Api for tracking and watering plant life
       "water_frequency": "24hr",
       "user_id": 1
   },
+```
+
+---
+
+### GET /api/plants/
+
+#### Returns:
+
+```
+  [
+    {
+        "id": 2,
+        "image": null,
+        "species": "palm",
+        "name": "breezy",
+        "water_frequency": "24hr",
+        "user_id": 1
+    },
+        {
+        "id": 3,
+        "image": null,
+        "species": "palm",
+        "name": "breezy",
+        "water_frequency": "24hr",
+        "user_id": 1
+    },
+  ]
 ```
