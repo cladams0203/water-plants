@@ -15,7 +15,7 @@ Api for tracking and watering plant life
 |  POST  |  /api/users/register  |         Register a new User          |    No     |
 |  POST  |    /api/user/login    |        Login an existing User        |    No     |
 |  GET   |      /api/users       |       Get a list of all Users        |    Yes    |
-|  POST  | /api/plants/users/:id | Add a new plant to a User by User id |    Yes    |
+|  POST  | /api/plants/user/:id  | Add a new plant to a User by User id |    Yes    |
 |  GET   |      /api/plants      |            Get all plants            |    Yes    |
 |  GET   |    /api/plants/:id    |       Get a Plant by Plant id        |    Yes    |
 |  PUT   |    /api/plants/:id    |      Update a Plant by Plant id      |    Yes    |
@@ -112,7 +112,7 @@ Api for tracking and watering plant life
 
 ---
 
-### POST /api/plants/users/:id
+### POST /api/plants/user/:id
 
 #### Endpoint Requires a valid User id
 
